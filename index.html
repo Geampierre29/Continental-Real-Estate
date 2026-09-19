@@ -1,238 +1,257 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continental Real Estate | Desarrollo e Inversión Inmobiliaria</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- BARRA SUPERIOR DE CONTACTO -->
-    <div class="top-bar">
-        <div class="top-container">
-            <span>📍 Av. República de Colombia 791, San Isidro | 📞 (+51) 989 344 159</span>
-            <div class="top-links">
-                <a href="#inversionistas">Inversionistas</a>
-                <a href="#contacto">Atención al Cliente</a>
-            </div>
+<!-- BARRA SUPERIOR CORPORATIVA -->
+<div class="top-bar">
+    <div class="top-container">
+        <span>📍 Av. República de Colombia 791, San Isidro, Lima | 📞 (+51) 989 344 159</span>
+        <div class="top-links">
+            <a href="#asesoria">Asesoría Ética</a>
+            <a href="#contacto">Atención Privada</a>
         </div>
     </div>
+</div>
 
-    <!-- NAVBAR NAVEGACIÓN -->
-    <header class="navbar">
-        <div class="logo">
+<!-- NAVBAR PRINCIPAL CON LOGO CORPORATIVO -->
+<header class="navbar">
+    <div class="logo">
+        <img src="https://lh3.googleusercontent.com/d/1yWlVlDkO1mBqR6c3sHwZ0S3N6_sN6R" alt="Continental Real Estate Logo" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
             CONTINENTAL <span class="sub-logo">REAL ESTATE</span>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#por-que-continental">¿Por qué Continental?</a></li>
-                <li><a href="#inversionistas">Inversionistas</a></li>
-                <li><a href="https://wa.me/51989344159?text=Hola,%20deseo%20asesoria%20inmobiliaria" target="_blank" class="btn-whatsapp-nav">💬 Asesoría WhatsApp</a></li>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#buscar">Buscador</a></li>
+            <li><a href="#propiedades">Propiedades</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#asesoria">Servicios</a></li>
+            <li><a href="https://wa.me/51989344159?text=Hola,%20deseo%20asesoria%20inmobiliaria%20personalizada" target="_blank" class="btn-whatsapp-nav">💬 Asesoría WhatsApp</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PORTADA Y FILTRO INTERACTIVO MULTINIVEL (ESTILO EDIFICA) -->
+<section id="buscar" class="hero">
+    <div class="hero-overlay">
+        <span class="hero-subtitle">ASESORÍA ÉTICA & PROPIEDADES EXCLUSIVAS</span>
+        <h1>Conectamos tus sueños con <span>oportunidades de valor</span></h1>
+        <p>Portal especializado en asesoría, compra, venta e inversión de inmuebles de alto nivel.</p>
+        
+        <!-- FILTRO AVANZADO MULTINIVEL -->
+        <div class="filter-bar">
+            <div class="filter-item">
+                <label for="filterDistrict">Distrito / Ubicación</label>
+                <select id="filterDistrict">
+                    <option value="todos">Todos los Distritos</option>
+                    <option value="san-isidro">San Isidro</option>
+                    <option value="miraflores">Miraflores</option>
+                    <option value="barranco">Barranco</option>
+                    <option value="la-molina">La Molina</option>
+                    <option value="surco">Santiago de Surco</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="filterType">Tipo de Propiedad</label>
+                <select id="filterType">
+                    <option value="todos">Todos los Tipos</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="penthouse">Penthouse</option>
+                    <option value="casa">Casa / Villa</option>
+                    <option value="oficina">Oficina Premium</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label for="filterStatus">Estado</label>
+                <select id="filterStatus">
+                    <option value="todos">Todos los Estados</option>
+                    <option value="lanzamiento">En Lanzamiento</option>
+                    <option value="construccion">En Construcción</option>
+                    <option value="entrega">Entrega Inmediata</option>
+                </select>
+            </div>
+            <button class="btn-filter" onclick="filtrarPropiedades()">🔍 Buscar Inmueble</button>
+        </div>
+    </div>
+</section>
+
+<!-- BARRA DE MÉTRICAS Y COBERTURA -->
+<section class="stats-bar">
+    <div class="stat-item">
+        <h2>+15</h2>
+        <p>Años de Experiencia</p>
+    </div>
+    <div class="stat-item">
+        <h2>100%</h2>
+        <p>Asesoría Ética & Transparente</p>
+    </div>
+    <div class="stat-item">
+        <h2>+$120M</h2>
+        <p>En Inmuebles Comercializados</p>
+    </div>
+    <div class="stat-item">
+        <h2>+1,200</h2>
+        <p>Clientes Satisfechos</p>
+    </div>
+</section>
+
+<!-- PORTAFOLIO / CATÁLOGO DE PROPIEDADES -->
+<section id="propiedades" class="projects-section">
+    <div class="section-header">
+        <span class="section-tag">CATÁLOGO SELECCIONADO</span>
+        <h2>Propiedades y Proyectos Destacados</h2>
+        <div class="gold-divider"></div>
+    </div>
+
+    <div class="projects-grid" id="propertiesContainer">
+        
+        <!-- TARJETA 1 -->
+        <article class="project-card" data-district="san-isidro" data-type="penthouse" data-status="entrega">
+            <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Penthouse San Isidro">
+                <span class="badge status-entrega">Entrega Inmediata</span>
+            </div>
+            <div class="card-content">
+                <span class="district-tag">SAN ISIDRO · PENTHOUSE</span>
+                <h3>Penthouse Exclusive Country Club</h3>
+                <p class="address">📍 Ca. Los Olivos 240, San Isidro</p>
+                <div class="specs-grid">
+                    <div><strong>Área:</strong> 280 m²</div>
+                    <div><strong>Dormitorios:</strong> 3 Dorms + Servicio</div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Precio de Venta</span>
+                        <span class="price-amount">$ 580,000 USD</span>
+                    </div>
+                    <a href="https://wa.me/51989344159?text=Deseo%20informacion%20del%20Penthouse%20Country%20Club%20en%20San%20Isidro" target="_blank" class="btn-card-action">Consultar</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- TARJETA 2 -->
+        <article class="project-card" data-district="miraflores" data-type="departamento" data-status="construccion">
+            <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="Miraflores Ocean View">
+                <span class="badge status-construccion">En Construcción</span>
+            </div>
+            <div class="card-content">
+                <span class="district-tag">MIRAFLORES · DEPARTAMENTO</span>
+                <h3>Residences Ocean View Miraflores</h3>
+                <p class="address">📍 Av. Malecón de la Reserva 610, Miraflores</p>
+                <div class="specs-grid">
+                    <div><strong>Área:</strong> Desde 95 m² a 160 m²</div>
+                    <div><strong>Dormitorios:</strong> 2 y 3 Dorms</div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Desde</span>
+                        <span class="price-amount">$ 295,000 USD</span>
+                    </div>
+                    <a href="https://wa.me/51989344159?text=Deseo%20informacion%20de%20Ocean%20View%20Miraflores" target="_blank" class="btn-card-action">Consultar</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- TARJETA 3 -->
+        <article class="project-card" data-district="barranco" data-type="departamento" data-status="lanzamiento">
+            <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Loft Art Barranco">
+                <span class="badge status-lanzamiento">En Lanzamiento</span>
+            </div>
+            <div class="card-content">
+                <span class="district-tag">BARRANCO · DEPARTAMENTO</span>
+                <h3>Boho Art & Design Apartments</h3>
+                <p class="address">📍 Av. Pedro de Osma 304, Barranco</p>
+                <div class="specs-grid">
+                    <div><strong>Área:</strong> Desde 50 m² a 85 m²</div>
+                    <div><strong>Dormitorios:</strong> 1 y 2 Dorms</div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Desde</span>
+                        <span class="price-amount">$ 138,000 USD</span>
+                    </div>
+                    <a href="https://wa.me/51989344159?text=Deseo%20informacion%20de%20Boho%20Art%20Barranco" target="_blank" class="btn-card-action">Consultar</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- TARJETA 4 -->
+        <article class="project-card" data-district="la-molina" data-type="casa" data-status="entrega">
+            <div class="card-media">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800" alt="Villa La Molina">
+                <span class="badge status-entrega">Entrega Inmediata</span>
+            </div>
+            <div class="card-content">
+                <span class="district-tag">LA MOLINA · CASA / VILLA</span>
+                <h3>Villa Moderna con Piscina Privada</h3>
+                <p class="address">📍 Av. La Planicie, La Molina</p>
+                <div class="specs-grid">
+                    <div><strong>Área Terreno:</strong> 600 m²</div>
+                    <div><strong>Dormitorios:</strong> 4 Dorms + Jardín</div>
+                </div>
+                <div class="card-footer">
+                    <div class="price-box">
+                        <span class="price-label">Precio Venta</span>
+                        <span class="price-amount">$ 820,000 USD</span>
+                    </div>
+                    <a href="https://wa.me/51989344159?text=Deseo%20informacion%20de%20la%20Villa%20en%20La%20Molina" target="_blank" class="btn-card-action">Consultar</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- SECCIÓN SOBRE NOSOTROS Y PROPUESTA DE VALOR -->
+<section id="nosotros" class="value-section">
+    <div class="value-container">
+        <div class="value-text">
+            <span class="section-tag">NUESTRA IDENTIDAD</span>
+            <h2>En Continental Real Estate asesoramos tu decisión financiera más importante</h2>
+            <div class="gold-divider left"></div>
+            <p>En <strong>Continental Real Estate</strong> no solo vendemos propiedades: conectamos a compradores e inversionistas con inmuebles con alto potencial de valorización, bajo un código estricto de ética, confidencialidad y excelencia técnica.</p>
+            <ul class="value-list">
+                <li>✓ Asesoría personalizada en valoración de inmuebles y rentabilidad.</li>
+                <li>✓ Acompañamiento legal, tributario y financiero integral.</li>
+                <li>✓ Portafolio de propiedades verificado y libre de cargas.</li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="value-image">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="Asesoría Inmobiliaria Profesional">
+        </div>
+    </div>
+</section>
 
-    <!-- HERO / PORTADA CON BUSCADOR DE PROYECTOS -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <span class="hero-subtitle">DESARROLLO E INVERSIÓN INMOBILIARIA DE ALTO NIVEL</span>
-            <h1>Encuentra tu próximo espacio o <span>inversión de valor</span></h1>
-            <p>Proyectos arquitectónicos con diseño vanguardista y alta rentabilidad en las zonas más consolidadas.</p>
-            
-            <!-- BUSCADOR TIPO EDIFICA -->
-            <div class="filter-bar">
-                <div class="filter-item">
-                    <label>Estado del Proyecto</label>
-                    <select id="filterStatus">
-                        <option value="todos">Todos los estados</option>
-                        <option value="lanzamiento">Lanzamiento</option>
-                        <option value="construccion">En Construcción</option>
-                        <option value="entrega">Entrega Inmediata</option>
-                    </select>
+<!-- PIE DE PÁGINA CORPORATIVO -->
+<footer id="contacto">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="logo footer-logo">
+                <img src="https://lh3.googleusercontent.com/d/1yWlVlDkO1mBqR6c3sHwZ0S3N6_sN6R" alt="Continental Real Estate Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    CONTINENTAL <span class="sub-logo">REAL ESTATE</span>
                 </div>
-                <div class="filter-item">
-                    <label>Ubicación / Distrito</label>
-                    <select id="filterDistrict">
-                        <option value="todos">Todos los distritos</option>
-                        <option value="miraflores">Miraflores</option>
-                        <option value="san-isidro">San Isidro</option>
-                        <option value="barranco">Barranco</option>
-                        <option value="magdalena">Magdalena del Mar</option>
-                    </select>
-                </div>
-                <div class="filter-item">
-                    <label>Dormitorios</label>
-                    <select id="filterDorms">
-                        <option value="todos">Cualquier dormitorio</option>
-                        <option value="1">1 Dormitorio</option>
-                        <option value="2">2 Dormitorios</option>
-                        <option value="3">3 Dormitorios</option>
-                    </select>
-                </div>
-                <button class="btn-filter" onclick="filtrarProyectos()">Buscar Proyecto</button>
             </div>
+            <p>Ofrecemos asesoría ética y experta para tu mejor decisión financiera y personal en el sector inmobiliario.</p>
         </div>
-    </section>
+        <div class="footer-col">
+            <h4>Inmuebles por Distrito</h4>
+            <ul>
+                <li><a href="#buscar">Departamentos en San Isidro</a></li>
+                <li><a href="#buscar">Proyectos en Miraflores</a></li>
+                <li><a href="#buscar">Lfts en Barranco</a></li>
+                <li><a href="#buscar">Casas en La Molina & Surco</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto Directo</h4>
+            <p>📍 Calle Mar de China Meridional Mz.H - Lt.26, Lima Metropolitana 15446</p>
+            <p>📞 (+51) 923 364 168</p>
+            <p>✉️ ventas@continentalrealestatepe.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Continental Real Estate. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
-    <!-- METRICAS / INDICADORES CORPORATIVOS -->
-    <section class="stats-bar">
-        <div class="stat-item">
-            <h2>+15</h2>
-            <p>Años de Trayectoria</p>
-        </div>
-        <div class="stat-item">
-            <h2>+120,000 m²</h2>
-            <p>Desarrollados</p>
-        </div>
-        <div class="stat-item">
-            <h2>100%</h2>
-            <p>Proyectos Entregados</p>
-        </div>
-        <div class="stat-item">
-            <h2>+1,500</h2>
-            <p>Familias e Inversionistas</p>
-        </div>
-    </section>
-
-    <!-- CATÁLOGO DE PROYECTOS TIPO EDIFICA -->
-    <section id="proyectos" class="projects-section">
-        <div class="section-header">
-            <span class="section-tag">PORTAFOLIO EXCLUSIVO</span>
-            <h2>Nuestros Proyectos Destacados</h2>
-            <div class="gold-divider"></div>
-        </div>
-
-        <div class="projects-grid">
-            
-            <!-- PROYECTO 1 -->
-            <article class="project-card" data-status="construccion" data-district="miraflores" data-dorms="3">
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Continental Skyline Miraflores">
-                    <span class="badge status-construccion">En Construcción</span>
-                </div>
-                <div class="card-content">
-                    <span class="district-tag">MIRAFLORES</span>
-                    <h3>Continental Skyline</h3>
-                    <p class="address">📍 Av. Alfredo Benavides 474, Miraflores</p>
-                    <div class="specs-grid">
-                        <div><strong>Dormitorios:</strong> 1, 2 y 3</div>
-                        <div><strong>Área:</strong> Desde 55 m² hasta 120 m²</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="price-box">
-                            <span class="price-label">Desde</span>
-                            <span class="price-amount">$ 145,000 USD</span>
-                        </div>
-                        <a href="https://wa.me/51989344159?text=Deseo%20informacion%20del%20proyecto%20Continental%20Skyline" target="_blank" class="btn-card-action">Cotizar Proyecto</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- PROYECTO 2 -->
-            <article class="project-card" data-status="lanzamiento" data-district="san-isidro" data-dorms="2">
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="Ascent Financial Tower San Isidro">
-                    <span class="badge status-lanzamiento">Lanzamiento</span>
-                </div>
-                <div class="card-content">
-                    <span class="district-tag">SAN ISIDRO</span>
-                    <h3>Ascent Financial Tower</h3>
-                    <p class="address">📍 Av. Rivera Navarrete 450, San Isidro</p>
-                    <div class="specs-grid">
-                        <div><strong>Dormitorios:</strong> 1 y 2</div>
-                        <div><strong>Área:</strong> Desde 42 m² hasta 85 m²</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="price-box">
-                            <span class="price-label">Desde</span>
-                            <span class="price-amount">$ 178,000 USD</span>
-                        </div>
-                        <a href="https://wa.me/51989344159?text=Deseo%20informacion%20del%20proyecto%20Ascent%20San%20Isidro" target="_blank" class="btn-card-action">Cotizar Proyecto</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- PROYECTO 3 -->
-            <article class="project-card" data-status="entrega" data-district="barranco" data-dorms="1">
-                <div class="card-media">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="The Muse Barranco">
-                    <span class="badge status-entrega">Entrega Inmediata</span>
-                </div>
-                <div class="card-content">
-                    <span class="district-tag">BARRANCO</span>
-                    <h3>The Muse Residences</h3>
-                    <p class="address">📍 Av. San Martín 715, Barranco</p>
-                    <div class="specs-grid">
-                        <div><strong>Dormitorios:</strong> 1 y 2</div>
-                        <div><strong>Área:</strong> Desde 38 m² hasta 70 m²</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="price-box">
-                            <span class="price-label">Desde</span>
-                            <span class="price-amount">$ 110,000 USD</span>
-                        </div>
-                        <a href="https://wa.me/51989344159?text=Deseo%20informacion%20del%20proyecto%20The%20Muse%20Barranco" target="_blank" class="btn-card-action">Cotizar Proyecto</a>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN PROPUESTA DE VALOR DE LA EMPRESA -->
-    <section id="por-que-continental" class="value-section">
-        <div class="value-container">
-            <div class="value-text">
-                <span class="section-tag">RESPALDO Y ÉTICA</span>
-                <h2>Conectamos tus sueños con oportunidades exclusivas</h2>
-                <div class="gold-divider left"></div>
-                <p>En <strong>Continental Real Estate</strong> estructuramos proyectos inmobiliarios de alto impacto patrimonial. Desarrollamos inmuebles con estándares de arquitectura sostenible, acabados premium e ingeniería de primera línea en las zonas de mayor valorización urbana.</p>
-                <ul class="value-list">
-                    <li>✓ Asesoría ética y transparente en cada fase del proceso.</li>
-                    <li>✓ Diseños eficientes orientados a maximizar la rentabilidad de tu inversión.</li>
-                    <li>✓ Acompañamiento crediticio personalizado con las principales entidades financieras.</li>
-                </ul>
-            </div>
-            <div class="value-image">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800" alt="Arquitectura Continental Real Estate">
-            </div>
-        </div>
-    </section>
-
-    <!-- PIE DE PÁGINA / FOOTER CORPORATIVO -->
-    <footer id="contacto">
-        <div class="footer-container">
-            <div class="footer-col">
-                <div class="logo footer-logo">
-                    CONTINENTAL <span>REAL ESTATE</span>
-                </div>
-                <p>Ofrecemos asesoría ética y experta para tu mejor decisión financiera y personal en el sector inmobiliario de lujo e inversión.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Proyectos en Venta</h4>
-                <ul>
-                    <li><a href="#proyectos">Departamentos en Miraflores</a></li>
-                    <li><a href="#proyectos">Proyectos en San Isidro</a></li>
-                    <li><a href="#proyectos">Edificios en Barranco</a></li>
-                    <li><a href="#proyectos">Lanzamientos Magdalena</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto Corporativo</h4>
-                <p>📍 República de Colombia 791 Of. 702, San Isidro</p>
-                <p>📞 (+51) 989 344 159</p>
-                <p>✉️ contacto@continentalrealestate.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Continental Real Estate. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<script src="script.js"></script>
