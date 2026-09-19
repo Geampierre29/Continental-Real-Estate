@@ -1,4 +1,4 @@
-{
+* {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -196,6 +196,8 @@ cursor: pointer;
 align-self: flex-end;
 height: 42px;
 transition: 0.3s;
+flex: 1;
+min-width: 200px;
 }
 
 .btn-filter:hover {
@@ -470,4 +472,35 @@ border-top: 1px solid #1e2d4a;
 padding-top: 20px;
 color: #718096;
 font-size: 12px;
+}
+
+/* AJUSTES RESPONSIVOS MOBILES */
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 12px 5%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .btn-filter {
+        width: 100%;
+    }
 }
