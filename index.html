@@ -3,24 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <title>El Depa de Rocko | Portal Inmobiliario Pet Friendly</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fuente moderna desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-<img src="continentalrealestate.jpg" alt="Mi foto" width="200">
-        <h1>¡Hola, mundo!</h1>
-        <p>Bienvenido a mi primera página web hecha desde cero.</p>
+
+    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo">🐾 El Depa de <span>Rocko</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Alquilar</a></li>
+                <li><a href="#">Publicar Depa</a></li>
+                <li><a href="#" class="btn-contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>Estoy aprendiendo desarrollo web paso a paso sin herramientas de pago.</p>
-        </section>
-        
-        <button id="botonMensaje">¡Haz clic aquí!</button>
-    </main>
+    <!-- 2. SECCIÓN HÉROE / PORTADA -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>El 1er Portal Inmobiliario <span>Pet Friendly</span></h1>
+            <p>Encuentra el hogar ideal para ti y tu mejor amigo de cuatro patas.</p>
+            
+            <!-- BUSCADOR CON FILTROS -->
+            <div class="search-box">
+                <input type="text" placeholder="Ubicación (ej. Miraflores, Barranco...)">
+                <select>
+                    <option>Tipo (Comprar / Alquilar)</option>
+                    <option>Alquiler</option>
+                    <option>Venta</option>
+                </select>
+                <button class="btn-search">Buscar Depa</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CATÁLOGO / TARJETAS DE PROPIEDADES -->
+    <section class="catalog">
+        <h2>Departamentos Destacados</h2>
+        <div class="cards-grid">
+            
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500" alt="Depa Pet Friendly">
+                <div class="card-body">
+                    <span class="badge">Pet Friendly 🐶</span>
+                    <h3>Depa Moderno en Barranco</h3>
+                    <p class="location">📍 Barranco, Lima</p>
+                    <p class="price">$850 / mes</p>
+                    <button class="btn-card" id="btnDepa1">Ver detalles</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500" alt="Depa Miraflores">
+                <div class="card-body">
+                    <span class="badge">Pet Friendly 🐱</span>
+                    <h3>Vista al Parque en Miraflores</h3>
+                    <p class="location">📍 Miraflores, Lima</p>
+                    <p class="price">$1,200 / mes</p>
+                    <button class="btn-card" id="btnDepa2">Ver detalles</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500" alt="Casa San Isidro">
+                <div class="card-body">
+                    <span class="badge">Jardín Amplio 🐾</span>
+                    <h3>Casa con Jardín en San Isidro</h3>
+                    <p class="location">📍 San Isidro, Lima</p>
+                    <p class="price">$2,500 / mes</p>
+                    <button class="btn-card" id="btnDepa3">Ver detalles</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 El Depa de Rocko · Portal Inmobiliario Pet Friendly</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
