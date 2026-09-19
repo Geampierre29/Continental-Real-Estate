@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b1320;
+    color: #ffffff;
 }
 
 /* NAVBAR */
@@ -16,196 +16,225 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: #070c14;
+    border-bottom: 1px solid #d4af37;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
     font-weight: 700;
-    color: #2c3e50;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 .logo span {
-    color: #e67e22; /* Color Naranja Inmobiliario */
+    color: #d4af37;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
 }
 
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
 .navbar a {
+    color: #e0e0e0;
     text-decoration: none;
-    color: #555;
-    font-weight: 500;
+    font-size: 14px;
     transition: 0.3s;
 }
 
 .navbar a:hover {
-    color: #e67e22;
+    color: #d4af37;
 }
 
-.btn-contacto {
-    background-color: #e67e22;
-    color: white !important;
-    padding: 8px 18px;
-    border-radius: 20px;
+.btn-gold {
+    border: 1px solid #d4af37;
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: #d4af37 !important;
 }
 
-/* HERO SECTION */
+.btn-gold:hover {
+    background-color: #d4af37;
+    color: #0b1320 !important;
+}
+
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200') center/cover no-repeat;
-    height: 70vh;
+    height: 80vh;
+    background: linear-gradient(rgba(11, 19, 32, 0.75), rgba(11, 19, 32, 0.85)), 
+                url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
     padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+    max-width: 800px;
 }
 
-.hero h1 span {
-    color: #f1c40f;
+.hero-content h1 span {
+    color: #d4af37;
 }
 
-.hero p {
+.hero-content p {
     font-size: 18px;
-    margin-bottom: 25px;
+    color: #cccccc;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
 }
 
-/* BUSCADOR */
-.search-box {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    display: flex;
-    gap: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.search-box input, .search-box select {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-}
-
-.btn-search {
-    background-color: #e67e22;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    cursor: pointer;
+.btn-hero {
+    background-color: #d4af37;
+    color: #0b1320;
+    padding: 14px 32px;
+    text-decoration: none;
     font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 
-.btn-search:hover {
-    background-color: #d35400;
+.btn-hero:hover {
+    background-color: #b89528;
 }
 
-/* CATÁLOGO DE DEPAS */
-.catalog {
-    padding: 60px 8%;
+/* NOSOTROS */
+.about {
+    padding: 80px 10%;
     text-align: center;
+    background-color: #0e1828;
 }
 
-.catalog h2 {
+.about h2, .properties h2 {
+    font-family: 'Cinzel', serif;
     font-size: 30px;
-    margin-bottom: 40px;
-    color: #2c3e50;
+    color: #d4af37;
+}
+
+.about-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #d4af37;
+    margin: 15px auto 25px auto;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dddddd;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* PROPIEDADES */
+.properties {
+    padding: 80px 8%;
+    text-align: center;
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
+    background-color: #131f33;
+    border: 1px solid #1e2d4a;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     text-align: left;
-    transition: transform 0.3s;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    border-color: #d4af37;
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 25px;
 }
 
-.badge {
-    background-color: #e8f8f5;
-    color: #27ae60;
+.tag {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: #d4af37;
     font-size: 12px;
-    font-weight: 600;
     padding: 4px 10px;
-    border-radius: 12px;
+    border-radius: 4px;
+    border: 1px solid #d4af37;
 }
 
 .card-body h3 {
-    margin: 10px 0 5px 0;
-    font-size: 18px;
+    margin: 15px 0 8px 0;
+    font-size: 20px;
 }
 
 .location {
-    color: #7f8c8d;
+    color: #aaaaaa;
     font-size: 14px;
 }
 
 .price {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: #e67e22;
-    margin: 10px 0;
+    color: #d4af37;
+    margin: 15px 0;
 }
 
 .btn-card {
     width: 100%;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .btn-card:hover {
-    background-color: #1a252f;
+    background-color: #d4af37;
+    color: #0b1320;
 }
 
 /* FOOTER */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #070c14;
+    border-top: 1px solid #1e2d4a;
     text-align: center;
-    padding: 25px;
-    margin-top: 40px;
+    padding: 40px 20px;
+}
+
+footer p {
+    color: #d4af37;
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    color: #777777;
+    font-size: 13px;
+    margin-top: 15px;
 }

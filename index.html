@@ -3,92 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Depa de Rocko | Portal Inmobiliario Pet Friendly</title>
+    <title>Continental Real Estate | Oportunidades Exclusivas</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente moderna desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <!-- NAVEGACIÓN -->
     <header class="navbar">
-        <div class="logo">🐾 El Depa de <span>Rocko</span></div>
+        <div class="logo">
+            CONTINENTAL <span>REAL ESTATE</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Comprar</a></li>
-                <li><a href="#">Alquilar</a></li>
-                <li><a href="#">Publicar Depa</a></li>
-                <li><a href="#" class="btn-contacto">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="#contacto" class="btn-gold">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 2. SECCIÓN HÉROE / PORTADA -->
-    <section class="hero">
+    <!-- PORTADA / HERO -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>El 1er Portal Inmobiliario <span>Pet Friendly</span></h1>
-            <p>Encuentra el hogar ideal para ti y tu mejor amigo de cuatro patas.</p>
-            
-            <!-- BUSCADOR CON FILTROS -->
-            <div class="search-box">
-                <input type="text" placeholder="Ubicación (ej. Miraflores, Barranco...)">
-                <select>
-                    <option>Tipo (Comprar / Alquilar)</option>
-                    <option>Alquiler</option>
-                    <option>Venta</option>
-                </select>
-                <button class="btn-search">Buscar Depa</button>
-            </div>
+            <h1>Conectamos tus sueños con <span>oportunidades exclusivas</span></h1>
+            <p>Ofrecemos asesoría ética y experta para tu mejor decisión financiera y personal.</p>
+            <a href="#propiedades" class="btn-hero">Ver Propiedades</a>
         </div>
     </section>
 
-    <!-- 3. CATÁLOGO / TARJETAS DE PROPIEDADES -->
-    <section class="catalog">
-        <h2>Departamentos Destacados</h2>
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="about">
+        <h2>Asesoría Ética & Experta</h2>
+        <div class="about-divider"></div>
+        <p>En <strong>Continental Real Estate</strong> entendemos que cada propiedad representa un proyecto de vida o un paso decisivo en tu patrimonio. Te acompañamos con transparencia, profesionalismo y un portafolio exclusivo.</p>
+    </section>
+
+    <!-- PROPIEDADES DESTACADAS -->
+    <section id="propiedades" class="properties">
+        <h2>Propiedades Destacadas</h2>
+        <div class="about-divider"></div>
+        
         <div class="cards-grid">
-            
             <!-- Tarjeta 1 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500" alt="Depa Pet Friendly">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Residencia de Lujo">
                 <div class="card-body">
-                    <span class="badge">Pet Friendly 🐶</span>
-                    <h3>Depa Moderno en Barranco</h3>
-                    <p class="location">📍 Barranco, Lima</p>
-                    <p class="price">$850 / mes</p>
-                    <button class="btn-card" id="btnDepa1">Ver detalles</button>
+                    <span class="tag">Exclusivo</span>
+                    <h3>Residencia Moderna Premium</h3>
+                    <p class="location">📍 Zona Residencial Exclusiva</p>
+                    <p class="price">$450,000 USD</p>
+                    <button class="btn-card">Solicitar Información</button>
                 </div>
             </div>
 
             <!-- Tarjeta 2 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500" alt="Depa Miraflores">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Departamento de Lujo">
                 <div class="card-body">
-                    <span class="badge">Pet Friendly 🐱</span>
-                    <h3>Vista al Parque en Miraflores</h3>
-                    <p class="location">📍 Miraflores, Lima</p>
-                    <p class="price">$1,200 / mes</p>
-                    <button class="btn-card" id="btnDepa2">Ver detalles</button>
+                    <span class="tag">Oportunidad</span>
+                    <h3>Penthouse Vista Panorámica</h3>
+                    <p class="location">📍 Distrito Financiero</p>
+                    <p class="price">$320,000 USD</p>
+                    <button class="btn-card">Solicitar Información</button>
                 </div>
             </div>
 
             <!-- Tarjeta 3 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500" alt="Casa San Isidro">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600" alt="Villa Exclusiva">
                 <div class="card-body">
-                    <span class="badge">Jardín Amplio 🐾</span>
-                    <h3>Casa con Jardín en San Isidro</h3>
-                    <p class="location">📍 San Isidro, Lima</p>
-                    <p class="price">$2,500 / mes</p>
-                    <button class="btn-card" id="btnDepa3">Ver detalles</button>
+                    <span class="tag">Inversión</span>
+                    <h3>Villa con Piscina y Jardín</h3>
+                    <p class="location">📍 Club de Campo</p>
+                    <p class="price">$580,000 USD</p>
+                    <button class="btn-card">Solicitar Información</button>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- 4. PIE DE PÁGINA -->
-    <footer>
-        <p>© 2026 El Depa de Rocko · Portal Inmobiliario Pet Friendly</p>
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <p><strong>CONTINENTAL REAL ESTATE</strong></p>
+        <p>Asesoría Inmobiliaria de Alto Nivel</p>
+        <p class="copyright">© 2026 Continental Real Estate. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
